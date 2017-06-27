@@ -6,66 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=BenchNine:300|Rock+Salt');
-		html {
-			font-size: 20px;
-		}
-
-		body {
-			margin: 0;
-			font-family: "BenchNine", Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 1rem;
-			font-weight: 300;
-		}
-
-		.parent {
-			display: block;
-			width: 100%;
-			height: 100vh;
-			position: relative;
-		}
-
-		.child {
-			display: table;
-			background: #fff;
-			transform: translate3d(0, -50%, 0);
-			width: 80vw;
-			height: 30vh;
-			margin: 0 auto;
-		}
-
-		@media (min-width: 600px) {
-			.child {
-				width: 30vw;
-				position: absolute;
-				overflow: hidden;
-				top: 50%;
-				left: 50%;
-				transform: translate3d(-50%, -50%, 0);
-			}
-		}
-
-		.js-is-sticky {}
-
-		.content {
-			display: table-cell;
-			vertical-align: middle;
-			text-align: center;
-		}
-
-		.index {
-			font-family: "Rock Salt", cursive;
-			font-size: 5rem;
-			line-height: 2em;
-		}
-
-		.content p {
-			display: block;
-			margin: 0;
-			padding: 1rem 2rem;
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -123,21 +64,7 @@
 		</div>
 	</main>
 	<footer style="background: #000; height: 30vh;"></footer>
-	<script src="node_modules/stickybits/dist/stickybits.min.js" charset="utf-8"></script>
-	<script>
-		const screen = {
-			width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-			height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
-		}
-		const child = {
-			height: document.querySelectorAll('.child')
-		}
-		console.log(child.height.clientHeight)
-		stickybits('.child', {
-			useStickyClasses: true,
-			stickyBitStickyOffset: ~~(screen.height / 2)
-		})
-	</script>
+	<script src="index.js" charset="utf-8"></script>
 </body>
 
 </html>
